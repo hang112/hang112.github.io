@@ -55,28 +55,37 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://hang112.github.io/index.html">
+  <meta name="description" content="说在之前为什么要从排序说起呢？虽然各种语言提供了排序的接口，比如C#的List.Sort()，lua的table.sort()，但如果知道排序具体的实现，对学习和了解其他算法有更好的帮助。在此之前，先给出排序的模板代码和测试代码。 public class Example {     public static void Sort(Comparable[] a)     {         //t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序">
+<meta property="og:url" content="http://hang112.github.io/2019/10/04/sort/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="说在之前为什么要从排序说起呢？虽然各种语言提供了排序的接口，比如C#的List.Sort()，lua的table.sort()，但如果知道排序具体的实现，对学习和了解其他算法有更好的帮助。在此之前，先给出排序的模板代码和测试代码。 public class Example {     public static void Sort(Comparable[] a)     {         //t">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://hang112.github.io/.io//selection.png">
+<meta property="og:image" content="http://hang112.github.io/.io//insertion.png">
+<meta property="og:image" content="http://hang112.github.io/.io//h-sorted.png">
+<meta property="og:image" content="http://hang112.github.io/.io//shell.png">
+<meta property="og:updated_time" content="2019-10-07T07:30:56.906Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  <link rel="canonical" href="http://hang112.github.io/">
+<meta name="twitter:title" content="排序">
+<meta name="twitter:description" content="说在之前为什么要从排序说起呢？虽然各种语言提供了排序的接口，比如C#的List.Sort()，lua的table.sort()，但如果知道排序具体的实现，对学习和了解其他算法有更好的帮助。在此之前，先给出排序的模板代码和测试代码。 public class Example {     public static void Sort(Comparable[] a)     {         //t">
+<meta name="twitter:image" content="http://hang112.github.io/.io//selection.png">
+  <link rel="canonical" href="http://hang112.github.io/2019/10/04/sort/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Hexo</title>
+  <title>排序 | Hexo</title>
   
 
 
@@ -184,12 +193,13 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+
   <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="http://hang112.github.io/2019/10/04/sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -202,9 +212,8 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/04/sort/" class="post-title-link" itemprop="url">排序</a>
+        <h1 class="post-title" itemprop="name headline">排序
+
           
         </h1>
 
@@ -246,7 +255,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="说在之前"><a href="#说在之前" class="headerlink" title="说在之前"></a>说在之前</h2><p>为什么要从排序说起呢？虽然各种语言提供了排序的接口，比如C#的List.Sort()，lua的table.sort()，但如果知道排序具体的实现，对学习和了解其他算法有更好的帮助。<br>在此之前，先给出排序的模板代码和测试代码。</p>
+        <h2 id="说在之前"><a href="#说在之前" class="headerlink" title="说在之前"></a>说在之前</h2><p>为什么要从排序说起呢？虽然各种语言提供了排序的接口，比如C#的List.Sort()，lua的table.sort()，但如果知道排序具体的实现，对学习和了解其他算法有更好的帮助。<br>在此之前，先给出排序的模板代码和测试代码。</p>
 <pre><code>public class Example
 {
     public static void Sort(Comparable[] a)
@@ -417,27 +426,27 @@
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>图片来源 <a href="https://algs4.cs.princeton.edu/21elementary/" title="Algorithms" target="_blank" rel="noopener">Algorithms</a>  </p>
 <h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>&emsp;&emsp;这是我的第一篇博客，就这么点内容写了一个星期。主要是熟悉markdown的语法，数学公式之类。以后工作中遇到什么问题也会来记录。</p>
 
-        
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-          <div class="post-eof"></div>
         
+      
+
+      <footer class="post-footer">
+
+        
+
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
   </div>
-
-  
 
 
           </div>
@@ -456,6 +465,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -468,6 +482,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在之前"><span class="nav-number">1.</span> <span class="nav-text">说在之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初级排序算法"><span class="nav-number">2.</span> <span class="nav-text">初级排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#①选择排序"><span class="nav-number">2.1.</span> <span class="nav-text">①选择排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#②插入排序"><span class="nav-number">2.2.</span> <span class="nav-text">②插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#③冒泡排序"><span class="nav-number">2.3.</span> <span class="nav-text">③冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#④希尔排序"><span class="nav-number">2.4.</span> <span class="nav-text">④希尔排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#⑤归并排序"><span class="nav-number">2.5.</span> <span class="nav-text">⑤归并排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#⑥快速排序"><span class="nav-number">2.6.</span> <span class="nav-text">⑥快速排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#⑦堆排序"><span class="nav-number">2.7.</span> <span class="nav-text">⑦堆排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我该使用什么排序？"><span class="nav-number">2.8.</span> <span class="nav-text">我该使用什么排序？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结尾"><span class="nav-number">4.</span> <span class="nav-text">结尾</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
@@ -566,12 +582,6 @@
 
   
 
-  
-    
-      
-        
-      
-    
   
     
       
