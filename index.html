@@ -56,12 +56,12 @@
 </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="hAng的记录">
 <meta property="og:url" content="http://hang112.github.io/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="hAng的记录">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="hAng的记录">
   <link rel="canonical" href="http://hang112.github.io/">
 
 
@@ -76,7 +76,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>hAng的记录</title>
   
 
 
@@ -123,7 +123,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">hAng的记录</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -193,13 +193,13 @@
     <link itemprop="mainEntityOfPage" href="http://hang112.github.io/2019/10/04/sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="ruanhang">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="hAng的记录">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -361,7 +361,7 @@
 <li>运行时间和输入无关。白话就是两个相同长度的数组，一个已经排序好，一个随机排列，它们用的时间是一样的。即最优和最坏时间复杂度都是o($n^2$)</li>
 <li>数据移动次数最少。这是下面任何算法都不具备的。  </li>
 </ol>
-<p>选择排序的轨迹如下图所示。<br><img src="/.io//selection.png" alt="avatar">  </p>
+<p>选择排序的轨迹如下图所示。<br><img src="//hang112.github.io/2019/10/04/sort/selection.png" alt="avatar">  </p>
 <h3 id="②插入排序"><a href="#②插入排序" class="headerlink" title="②插入排序"></a>②插入排序</h3><p>想一想我们平时打斗地主或是跑得快，牌堆是乱序的。对于每个人，从抓牌开始到结束，其实就是插入排序的过程。每次抓牌前，手牌都已经是从小到大排序好的；抓牌后，把它插入到合适的位置保证手牌是有序的。</p>
 <pre><code>public class Insertion
 {
@@ -380,9 +380,9 @@
 </code></pre><p>对于随机排列长度为N且主键不重复的数组，平均情况下需要$\frac{N^2}{4}$次比较以及$\frac{N^2}{4}$次交换。最坏情况下需要$\frac{N^2}{2}$次比较以及$\frac{N^2}{2}$次交换。最好情况下需要N-1次比较和0次交换。</p>
 <p>_倒置_ 指的是数组中的两个顺序颠倒的元素。<br>假如我们要将数组[3,4,5,2,1]排序，它有7对倒置：3-2、3-1、4-2、4-1、5-2、5-1、2-1。  </p>
 <p>插入排序需要的交换次数和倒置的数量相同，这个很好理解。当数组中倒置数量为0时，数组有序。<br>每次交换都伴随着一次比较。当每个元素达到它最终的位置且不是第一个元素时，它还会和它前面的元素比较一次。所以  $倒置数量\leq比较次数\leq(倒置数量+N-1)$<br>根据以上性质，当倒置的数量很少时，插入排序很可能比本文其他算法都要快。  </p>
-<p>插入排序的轨迹如下图所示。<br><img src="/.io//insertion.png" alt="avatar">  </p>
+<p>插入排序的轨迹如下图所示。<br><img src="//hang112.github.io/2019/10/04/sort/insertion.png" alt="avatar">  </p>
 <h3 id="③冒泡排序"><a href="#③冒泡排序" class="headerlink" title="③冒泡排序"></a>③冒泡排序</h3><p>上面的排序算是暴力解决法，它们的平均时间复杂度都是o($n^2$)。当数据量很大时已经无法完成。</p>
-<h3 id="④希尔排序"><a href="#④希尔排序" class="headerlink" title="④希尔排序"></a>④希尔排序</h3><p>对于大规模乱序数组插入排序很慢，因为它只会交换相邻的元素，因此元素只能一点一点地从数组的一端移动到另一端。希尔排序的思想是使数组中任意间隔为h的元素都是有序的。这样的数组被称为 _h有序数组_。一个h有序数组是h个互相独立的有序数组组成在一起的。<br><img src="/.io//h-sorted.png" alt="avatar">  </p>
+<h3 id="④希尔排序"><a href="#④希尔排序" class="headerlink" title="④希尔排序"></a>④希尔排序</h3><p>对于大规模乱序数组插入排序很慢，因为它只会交换相邻的元素，因此元素只能一点一点地从数组的一端移动到另一端。希尔排序的思想是使数组中任意间隔为h的元素都是有序的。这样的数组被称为 _h有序数组_。一个h有序数组是h个互相独立的有序数组组成在一起的。<br><img src="//hang112.github.io/2019/10/04/sort/h-sorted.png" alt="avatar">  </p>
 <p>如果h很大，我们就能将元素移动到很远的地方，为实现更小的h有序创造方便。下面的例子使用了从$\frac{N}{3}$递减至1的序列。这个序列称为 _递增序列_  。下面的代码是实时计算的，另一种方式是提前计算，将这个序列存储在一个数组中。</p>
 <pre><code>public class Shell
 {
@@ -405,7 +405,7 @@
     } 
     ...
 }
-</code></pre><p>希尔排序的轨迹如下图所示。<br><img src="/.io//shell.png" alt="avatar">  </p>
+</code></pre><p>希尔排序的轨迹如下图所示。<br><img src="//hang112.github.io/2019/10/04/sort/shell.png" alt="avatar">  </p>
 <p>希尔排序可以看成是多次的插入排序，只不过前面的插入排序会为后面的插入排序提供便利。最好情况下需要常数次的比较和0次交换。最坏情况下需要$N^{1.5}$次比较。不需要使用额外的内存空间。  </p>
 <h3 id="⑤归并排序"><a href="#⑤归并排序" class="headerlink" title="⑤归并排序"></a>⑤归并排序</h3><h3 id="⑥快速排序"><a href="#⑥快速排序" class="headerlink" title="⑥快速排序"></a>⑥快速排序</h3><h3 id="⑦堆排序"><a href="#⑦堆排序" class="headerlink" title="⑦堆排序"></a>⑦堆排序</h3><h3 id="我该使用什么排序？"><a href="#我该使用什么排序？" class="headerlink" title="我该使用什么排序？"></a>我该使用什么排序？</h3><p>选择插入冒泡的平均复杂度都在平方级别，其他复杂算法除开希尔都是对数级别。  </p>
 <ol>
@@ -473,7 +473,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">ruanhang</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -508,7 +508,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">ruanhang</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
