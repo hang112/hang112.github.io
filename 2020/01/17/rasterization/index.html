@@ -58,17 +58,17 @@
   <meta name="description" content="直线的两种方程表示1.斜截式y = mx + b。   在有些情况下斜截式不是最好的表示方式，例如直线x = 0没法用斜截式表示，因为这条直线的m是无穷大。因此有另一种隐含式。 2.隐含式y - mx - b = 0。   m是斜率，b是穿过y轴时的y值。在不改变方程的零点情况下，可以对隐式方程两边同乘以一个常量。对任意非零的k，kf(x, y) = 0 与 f(x, y) = 0是相同的曲线。所">
 <meta property="og:type" content="article">
 <meta property="og:title" content="光栅化">
-<meta property="og:url" content="http://hang112.github.io/2020/01/17/光栅化/index.html">
+<meta property="og:url" content="http://hang112.github.io/2020/01/17/rasterization/index.html">
 <meta property="og:site_name" content="hAng的记录">
 <meta property="og:description" content="直线的两种方程表示1.斜截式y = mx + b。   在有些情况下斜截式不是最好的表示方式，例如直线x = 0没法用斜截式表示，因为这条直线的m是无穷大。因此有另一种隐含式。 2.隐含式y - mx - b = 0。   m是斜率，b是穿过y轴时的y值。在不改变方程的零点情况下，可以对隐式方程两边同乘以一个常量。对任意非零的k，kf(x, y) = 0 与 f(x, y) = 0是相同的曲线。所">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://hang112.github.io/.io//光栅化1.png">
-<meta property="og:updated_time" content="2020-01-17T10:17:13.671Z">
+<meta property="og:image" content="http://hang112.github.io/.io//drawline.png">
+<meta property="og:updated_time" content="2020-01-17T10:24:11.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="光栅化">
 <meta name="twitter:description" content="直线的两种方程表示1.斜截式y = mx + b。   在有些情况下斜截式不是最好的表示方式，例如直线x = 0没法用斜截式表示，因为这条直线的m是无穷大。因此有另一种隐含式。 2.隐含式y - mx - b = 0。   m是斜率，b是穿过y轴时的y值。在不改变方程的零点情况下，可以对隐式方程两边同乘以一个常量。对任意非零的k，kf(x, y) = 0 与 f(x, y) = 0是相同的曲线。所">
-<meta name="twitter:image" content="http://hang112.github.io/.io//光栅化1.png">
-  <link rel="canonical" href="http://hang112.github.io/2020/01/17/光栅化/">
+<meta name="twitter:image" content="http://hang112.github.io/.io//drawline.png">
+  <link rel="canonical" href="http://hang112.github.io/2020/01/17/rasterization/">
 
 
 <script id="page-configurations">
@@ -197,7 +197,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://hang112.github.io/2020/01/17/光栅化/">
+    <link itemprop="mainEntityOfPage" href="http://hang112.github.io/2020/01/17/rasterization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruanhang">
@@ -225,7 +225,7 @@
                 
               
 
-              <time title="创建时间：2020-01-17 16:47:33 / 修改时间：18:17:13" itemprop="dateCreated datePublished" datetime="2020-01-17T16:47:33+08:00">2020-01-17</time>
+              <time title="创建时间：2020-01-17 16:47:33 / 修改时间：18:24:11" itemprop="dateCreated datePublished" datetime="2020-01-17T16:47:33+08:00">2020-01-17</time>
             </span>
           
             
@@ -269,7 +269,7 @@
 <h3 id="2-如何计算点-x-y-的β值"><a href="#2-如何计算点-x-y-的β值" class="headerlink" title="2.如何计算点(x, y)的β值?"></a>2.如何计算点(x, y)的β值?</h3><p>β值是以点到(c - a)为基向量的直线的距离。b的β值是1，所以有</p>
 <p>β = $\frac{f<em>{ac}(x, y)}{f</em>{ac}(x_b, y_b)}$ = $\frac{(y_a - y_c)x + (x_c - x_a)y + x_ay_c - x_cy_a}{(y_a - y_c)x_b + (x_c - x_a)y_b + x_ay_c - x_cy_a}$<br>类似可求γ。<br>α = 1 - β - γ</p>
 <h2 id="画直线"><a href="#画直线" class="headerlink" title="画直线"></a>画直线</h2><h3 id="1-基于隐式方程绘制直线"><a href="#1-基于隐式方程绘制直线" class="headerlink" title="1.基于隐式方程绘制直线"></a>1.基于隐式方程绘制直线</h3><p>首先有直线的隐式方程：<br>f(x, y) = ($y_0$ - $y_1$)x + ($x_1$ - $x_0$)y + $x_0<script type="math/tex">y_1$ - $x_1</script>y_0$ = 0<br>假设$x_0\leq y_0$， 如果不满足，交换点的顺序使之成立。直线的斜率为m=$\frac{y_1-y_0}{x_1-x_0}$。<br>在下面的讨论中都假设m ∈ (0, 1]。类似地，可以推出m ∈ (-$\infty$, -1]、m ∈ (-1, 0]和m ∈ (1, +$\infty$]时的结果。这4种情况覆盖了所有的可能情况。  </p>
-<p>绘制直线时，从左端点向右端点进行。只有两种可能：绘制一像素时，和左边所所绘制像素高度一致，或者高出一个像素。在两端点之间每一列，总是只有一个像素。没有像素就意味着有间隔，有两个像素则直线太粗。因为直线更接近水平，在水平方向的前进速度比垂直方向要快。有如下算法:<br>y = $y_0$<br>for x = $x_0$ to $x_1$ do<br>&emsp;&emsp;draw(x, y)<br>&emsp;&emsp;if(some condition) then<br>&emsp;&emsp;&emsp;&emsp;y = y + 1<br>从左至右不断绘制像素，在该过程中有时需要向y轴正向有所偏移。关键是如何确定if语句中的条件。<br>一种有效方法是，参考两候选像素点之间的中点位置。对于刚绘制的像素点(x, y),它在屏幕上的坐标为(x, y),下面要绘制的候选像素为(x+1,y)和(x+1,y+1)。两候选像点之间的中点为(x+1, y+0.5)。如果直线通过中点的下方，就绘制下面的像素，否则绘制上面的像素，如图：<br><img src="/.io//光栅化1.png" alt="avatar"><br>判断直线是通过点(x+1, y+0.5)的上方还是下方,可以通过式f(x+1, y+0.5)的值来判断。但很难利用f(x,y)的正负来快速判断是位于直线的上、下哪个方向。但是，可以通过分析算出来。($x_1-x_0$)肯定为正数，这就意味着随着y的增大，($x_1-x_0$)y项的值将变大。因此f(x, +$\infty$)肯定为正，并且位于直线的上方，也就是说直线上方的点都是正的。<br>于是，我们可以把if语句中的条件写具体：</p>
+<p>绘制直线时，从左端点向右端点进行。只有两种可能：绘制一像素时，和左边所所绘制像素高度一致，或者高出一个像素。在两端点之间每一列，总是只有一个像素。没有像素就意味着有间隔，有两个像素则直线太粗。因为直线更接近水平，在水平方向的前进速度比垂直方向要快。有如下算法:<br>y = $y_0$<br>for x = $x_0$ to $x_1$ do<br>&emsp;&emsp;draw(x, y)<br>&emsp;&emsp;if(some condition) then<br>&emsp;&emsp;&emsp;&emsp;y = y + 1<br>从左至右不断绘制像素，在该过程中有时需要向y轴正向有所偏移。关键是如何确定if语句中的条件。<br>一种有效方法是，参考两候选像素点之间的中点位置。对于刚绘制的像素点(x, y),它在屏幕上的坐标为(x, y),下面要绘制的候选像素为(x+1,y)和(x+1,y+1)。两候选像点之间的中点为(x+1, y+0.5)。如果直线通过中点的下方，就绘制下面的像素，否则绘制上面的像素，如图：<br><img src="/.io//drawline.png" alt="avatar"><br>判断直线是通过点(x+1, y+0.5)的上方还是下方,可以通过式f(x+1, y+0.5)的值来判断。但很难利用f(x,y)的正负来快速判断是位于直线的上、下哪个方向。但是，可以通过分析算出来。($x_1-x_0$)肯定为正数，这就意味着随着y的增大，($x_1-x_0$)y项的值将变大。因此f(x, +$\infty$)肯定为正，并且位于直线的上方，也就是说直线上方的点都是正的。<br>于是，我们可以把if语句中的条件写具体：</p>
 <pre><code>if f(x+1, y+0.5) &lt; 0 then
 </code></pre><p>还有一种更高效率,就是 <em>增量方法</em>。以后再讨论。</p>
 <h3 id="2-基于参数方程绘制直线"><a href="#2-基于参数方程绘制直线" class="headerlink" title="2.基于参数方程绘制直线"></a>2.基于参数方程绘制直线</h3><h2 id="画三角形"><a href="#画三角形" class="headerlink" title="画三角形"></a>画三角形</h2><p>有一过点$p_0=(x_0,y_0)$、$p_1=(x_1,y_1)$、$p_2=(x_2,y_2)$的三角形，顶点颜色分别为$c_0, c_1, c_2$。在重心坐标为(α,β,γ)的三角形内部，某点的颜色值为<br>$c = αc_0 + βc_1 + γc_2$  </p>
@@ -292,7 +292,7 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/11/28/cocoscreator发布android记录/" rel="next" title="cocoscreator发布android记录">
+                <a href="/2019/11/28/creator_publish_android/" rel="next" title="cocoscreator发布android记录">
                   <i class="fa fa-chevron-left"></i> cocoscreator发布android记录
                 </a>
               
