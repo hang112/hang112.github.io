@@ -55,25 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="记录一下今天用AndroidStudio发布包遇到的几个问题  第三方库重复引用的问题，如下图所示，上面那句已经包含所有jar，aar的库，下面再引用会报错；  常数是配置在工程目录下的gradle.properties文件下;  报transformClassesAndResourcesWithProguardForRelease这个错误是release下混淆的报错;找到报warning的类,如">
+  <meta name="description" content="1.命令模式给角色下命令 public interface Command {     void Excute();     void Undo(); } 2.享元模式1.绘制森林, 所有树共享网格和贴图. 硬件支持2.生成地形. 整个地形的水区块.x区块的网格贴图也是一样的,不一样的只是位置 3.观察者模式4.原型模式5.单例模式防止滥用单例模式. 比如有一个Log类, 我们把他设计成了单例模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cocoscreator发布android记录">
-<meta property="og:url" content="http://hang112.github.io/2019/11/28/creator_publish_android/index.html">
+<meta property="og:title" content="游戏设计模式">
+<meta property="og:url" content="http://hang112.github.io/2020/01/20/game_design_patterns/index.html">
 <meta property="og:site_name" content="hAng的记录">
-<meta property="og:description" content="记录一下今天用AndroidStudio发布包遇到的几个问题  第三方库重复引用的问题，如下图所示，上面那句已经包含所有jar，aar的库，下面再引用会报错；  常数是配置在工程目录下的gradle.properties文件下;  报transformClassesAndResourcesWithProguardForRelease这个错误是release下混淆的报错;找到报warning的类,如">
+<meta property="og:description" content="1.命令模式给角色下命令 public interface Command {     void Excute();     void Undo(); } 2.享元模式1.绘制森林, 所有树共享网格和贴图. 硬件支持2.生成地形. 整个地形的水区块.x区块的网格贴图也是一样的,不一样的只是位置 3.观察者模式4.原型模式5.单例模式防止滥用单例模式. 比如有一个Log类, 我们把他设计成了单例模式">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://hang112.github.io/2019/11/28/creator_publish_android/buildGradle2.png">
-<meta property="og:image" content="http://hang112.github.io/2019/11/28/creator_publish_android/buildGradle1.png">
-<meta property="og:image" content="http://hang112.github.io/2019/11/28/creator_publish_android/releaseJks.png">
-<meta property="og:image" content="http://hang112.github.io/2019/11/28/creator_publish_android/proguardError.png">
-<meta property="og:image" content="http://hang112.github.io/2019/11/28/creator_publish_android/proguardWarning.png">
-<meta property="og:image" content="http://hang112.github.io/2019/11/28/creator_publish_android/dontwarn.png">
-<meta property="og:updated_time" content="2020-01-17T10:28:09.195Z">
+<meta property="og:updated_time" content="2020-01-20T02:36:03.836Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cocoscreator发布android记录">
-<meta name="twitter:description" content="记录一下今天用AndroidStudio发布包遇到的几个问题  第三方库重复引用的问题，如下图所示，上面那句已经包含所有jar，aar的库，下面再引用会报错；  常数是配置在工程目录下的gradle.properties文件下;  报transformClassesAndResourcesWithProguardForRelease这个错误是release下混淆的报错;找到报warning的类,如">
-<meta name="twitter:image" content="http://hang112.github.io/2019/11/28/creator_publish_android/buildGradle2.png">
-  <link rel="canonical" href="http://hang112.github.io/2019/11/28/creator_publish_android/">
+<meta name="twitter:title" content="游戏设计模式">
+<meta name="twitter:description" content="1.命令模式给角色下命令 public interface Command {     void Excute();     void Undo(); } 2.享元模式1.绘制森林, 所有树共享网格和贴图. 硬件支持2.生成地形. 整个地形的水区块.x区块的网格贴图也是一样的,不一样的只是位置 3.观察者模式4.原型模式5.单例模式防止滥用单例模式. 比如有一个Log类, 我们把他设计成了单例模式">
+  <link rel="canonical" href="http://hang112.github.io/2020/01/20/game_design_patterns/">
 
 
 <script id="page-configurations">
@@ -87,7 +80,7 @@
   };
 </script>
 
-  <title>cocoscreator发布android记录 | hAng的记录</title>
+  <title>游戏设计模式 | hAng的记录</title>
   
 
 
@@ -202,7 +195,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://hang112.github.io/2019/11/28/creator_publish_android/">
+    <link itemprop="mainEntityOfPage" href="http://hang112.github.io/2020/01/20/game_design_patterns/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruanhang">
@@ -214,7 +207,7 @@
       <meta itemprop="name" content="hAng的记录">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">cocoscreator发布android记录
+        <h1 class="post-title" itemprop="name headline">游戏设计模式
 
           
         </h1>
@@ -230,19 +223,11 @@
                 
               
 
-              <time title="创建时间：2019-11-28 20:09:26" itemprop="dateCreated datePublished" datetime="2019-11-28T20:09:26+08:00">2019-11-28</time>
+              <time title="创建时间：2020-01-20 10:02:44 / 修改时间：10:36:03" itemprop="dateCreated datePublished" datetime="2020-01-20T10:02:44+08:00">2020-01-20</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-17 18:28:09" itemprop="dateModified" datetime="2020-01-17T18:28:09+08:00">2020-01-17</time>
-              </span>
             
           
 
@@ -257,12 +242,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>记录一下今天用AndroidStudio发布包遇到的几个问题</p>
-<ol>
-<li>第三方库重复引用的问题，如下图所示，上面那句已经包含所有jar，aar的库，下面再引用会报错；<br><img src="//hang112.github.io/2019/11/28/creator_publish_android/buildGradle2.png" alt="avatar"> </li>
-<li>常数是配置在工程目录下的gradle.properties文件下;<br><img src="//hang112.github.io/2019/11/28/creator_publish_android/buildGradle1.png" alt="avatar"><br><img src="//hang112.github.io/2019/11/28/creator_publish_android/releaseJks.png" alt="avatar"> </li>
-<li>报transformClassesAndResourcesWithProguardForRelease这个错误是release下混淆的报错;<br><img src="//hang112.github.io/2019/11/28/creator_publish_android/proguardError.png" alt="avatar"><br>找到报warning的类,如下图示<br><img src="//hang112.github.io/2019/11/28/creator_publish_android/proguardWarning.png" alt="avatar"><br>确定全部是com.nemo_paysdk.**，添加代码-dontwarn 去掉警告即可通过<br><img src="//hang112.github.io/2019/11/28/creator_publish_android/dontwarn.png" alt="avatar"> </li>
-</ol>
+        <h2 id="1-命令模式"><a href="#1-命令模式" class="headerlink" title="1.命令模式"></a>1.命令模式</h2><p>给角色下命令</p>
+<pre><code>public interface Command
+{
+    void Excute();
+    void Undo();
+}
+</code></pre><h2 id="2-享元模式"><a href="#2-享元模式" class="headerlink" title="2.享元模式"></a>2.享元模式</h2><p>1.绘制森林, 所有树共享网格和贴图. 硬件支持<br>2.生成地形. 整个地形的水区块.x区块的网格贴图也是一样的,不一样的只是位置</p>
+<h2 id="3-观察者模式"><a href="#3-观察者模式" class="headerlink" title="3.观察者模式"></a>3.观察者模式</h2><h2 id="4-原型模式"><a href="#4-原型模式" class="headerlink" title="4.原型模式"></a>4.原型模式</h2><h2 id="5-单例模式"><a href="#5-单例模式" class="headerlink" title="5.单例模式"></a>5.单例模式</h2><p>防止滥用单例模式. 比如有一个Log类, 我们把他设计成了单例模式.起初这不是什么大问题. 我们记录单独的日志文件,所以只需要一个实例. 然后,随着开发周期的逐次循环,我们遇到了麻烦. 每个团队的成员都使用日志记录各自的诊断信息,大量的日志倾泻在文件里. 程序员需要翻过很多页才能找到他关心的记录.<br>我们想将日志分散到多个文件中解决这点.可是我们做不到,因为log类不允许我们创建多个实例. 为了让log类支持多个实例,我们需要修改类和提及它的每一行代码. 更糟的是, 假如你的Log类写在库中,给多个游戏提供支持.为了改变设计,需要在多组人之间协调,他们中的大多是既没有时间,也没有动机修复它.</p>
 
     </div>
 
@@ -279,8 +266,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/04/sort/" rel="next" title="排序">
-                  <i class="fa fa-chevron-left"></i> 排序
+                <a href="/2020/01/17/rasterization/" rel="next" title="光栅化">
+                  <i class="fa fa-chevron-left"></i> 光栅化
                 </a>
               
             </div>
@@ -288,10 +275,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/01/17/rasterization/" rel="prev" title="光栅化">
-                  光栅化 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -340,6 +323,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-命令模式"><span class="nav-number">1.</span> <span class="nav-text">1.命令模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-享元模式"><span class="nav-number">2.</span> <span class="nav-text">2.享元模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-观察者模式"><span class="nav-number">3.</span> <span class="nav-text">3.观察者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-原型模式"><span class="nav-number">4.</span> <span class="nav-text">4.原型模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-单例模式"><span class="nav-number">5.</span> <span class="nav-text">5.单例模式</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
